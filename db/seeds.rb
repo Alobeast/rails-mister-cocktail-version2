@@ -14,6 +14,7 @@ ingredient = JSON.parse(ingredient_serialized)
 # puts ingredient.strIngredient1
 # puts ingredient
 # p ingredient["drinks"]
+Ingredient.destroy_all
 ingredient["drinks"].each do |ing|
   Ingredient.create(name: ing["strIngredient1"])
 end
